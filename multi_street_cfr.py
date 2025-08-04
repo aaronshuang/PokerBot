@@ -1,9 +1,3 @@
-"""
-Three-player Texas-Hold’em Outcome-Sampling MCCFR (FIXED)
-– Keeps your bet buckets   – Keeps three seats
-– ~15-20k traversals / second on an M2 Air (Python 3.11) after fixes
-"""
-
 from __future__ import annotations
 import random, pickle, sys
 from collections import defaultdict
@@ -256,7 +250,7 @@ def train(iters:int=ITERATIONS):
 
     with open(SAVE_FILE, 'wb') as f:
         pickle.dump(avg_strategy, f)
-    print("✅ Saved average strategy to:", SAVE_FILE)
+    print("Saved average strategy to:", SAVE_FILE)
 
 if __name__ == "__main__":
     try:
